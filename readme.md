@@ -33,6 +33,7 @@ var feed = new RSS(feedOptions);
  * `copyright` _optional_ **string** Copyright information for this feed.
  * `language` _optional_ **string**  The language of the content of this feed.
  * `categories` _optional_ **array of strings**  One or more categories this feed belongs to.
+ * `lastBuildDate` _optional_ **Date string** The publication date for content in the feed. Only taken into consideration if feed.xml is called with 'isCustomDate: true'
  * `pubDate` _optional_ **Date object or date string** The publication date for content in the feed
  * `ttl` _optional_ **integer** Number of minutes feed can be cached before refreshing from source.
  * `hub` _optional_ **PubSubHubbub hub url** Where is the PubSubHub hub located.
@@ -88,7 +89,7 @@ feed.item(itemOptions);
 ##### Feed XML
 
 ```js
-var xml = feed.xml({indent: true});
+var xml = feed.xml({indent: true, isCustomDate: true});
 ```
 
 This returns the XML as a string.
@@ -96,7 +97,7 @@ This returns the XML as a string.
 `indent` _optional_ **boolean or string** What to use as a tab. Defaults to no tabs (compressed).
 For example you can use `'\t'` for tab character, or `'  '` for two-space tabs. If you set it to
 `true` it will use four spaces.
-
+`isCustomDate` _optional_ **boolean** If dates should be displayed in custom format, for example following can be provided: `'item.date: moment().format('ddd, DD MMM YYYY HH:mm:ss ZZ')'`
 
 
 ### Example Usage

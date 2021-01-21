@@ -22,7 +22,7 @@ var feed = new RSS(feedOptions);
  * `copyright` _optional_ **string** Copyright information for this feed.
  * `language` _optional_ **string**  The language of the content of this feed.
  * `categories` _optional_ **array of strings**  One or more categories this feed belongs to.
- * `lastBuildDate` _optional_ **Date object or date string** The publication date for content in the feed. Only taken into consideration if feed.xml is called with 'isCustomDate: true'
+ * `lastBuildDate` _optional_ **Date string** The publication date for content in the feed. Only taken into consideration if feed.xml is called with 'isCustomDate: true'
  * `pubDate` _optional_ **Date object or date string** The publication date for content in the feed
  * `ttl` _optional_ **integer** Number of minutes feed can be cached before refreshing from source.
  * `hub` _optional_ **PubSubHubbub hub url** Where is the PubSubHub hub located.
