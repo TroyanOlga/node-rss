@@ -16,6 +16,7 @@ var feed = new RSS({
     copyright: '2013 Dylan Greene',
     language: 'en',
     categories: ['Category 1','Category 2','Category 3'],
+    lastBuildDate: 'May 20, 2012 04:00:00 GMT',
     pubDate: 'May 20, 2012 04:00:00 GMT',
     ttl: '60',
     custom_namespaces: {
