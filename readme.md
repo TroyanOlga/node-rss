@@ -54,9 +54,10 @@ feed.item(itemOptions);
  * `title` **string** Title of this particular item.
  * `description` **string** Content for the item.  Can contain html but link and image urls must be absolute path including hostname.
  * `url` **url string** Url to the item. This could be a blog entry.
- * `guid` **unique string** A unique string feed readers use to know if an item is new or has already been seen.
+ * `guid` _optional_ **unique string** A unique string feed readers use to know if an item is new or has already been seen.
  If you use a guid never change it.  If you don't provide a guid then your item urls must
- be unique.
+ be unique. If guid is not specified, however `item.link` is a truthy value, guid will be created utilizing `item.url` value. If neither guid nor link is provided, guid will be omitted during xml creation
+ * `link` _optional_ **boolean or string** Can be provided for guid creation based on url
  * `categories` _optional_ **array of strings** If provided, each array item will be added as a category element
  * `author` _optional_  **string**  If included it is the name of the item's creator.
  If not provided the item author will be the same as the feed author.  This is typical
